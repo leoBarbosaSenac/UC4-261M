@@ -121,28 +121,68 @@ cobra.botarOvo();      // método da classe Reptil
 
 ---
 
-## 5. 🎯 Exercícios
+# Exercícios — Herança em TypeScript
 
-### 📝 Exercício 1: Criando novas subclasses
+## Exercício 1: Criando uma subclasse
 
-* Crie uma subclasse `Crocodile` que herda de `Reptil`.
-* Adicione um método `swim()` (nadar).
-* Teste no `index.ts` criando um objeto `crocodile` e chame seus métodos.
+Crie uma classe `Crocodilo` que herde da classe `Reptil`.
+
+A classe `Crocodilo` deve:
+
+- Possuir um método `nadar()`, que exiba uma mensagem informando que o crocodilo está nadando.
+- Utilizar os atributos e métodos herdados das classes `Reptil` e `Animal`.
+
+No arquivo `index.ts`:
+
+1. Crie um objeto da classe `Crocodilo`.
+2. Chame o método `mover()`, herdado de `Animal`.
+3. Chame o método `botarOvo()`, herdado de `Reptil`.
+4. Chame o método `nadar()`, definido na própria classe `Crocodilo`.
+
+Observe como uma classe pode herdar características de outra classe que também utiliza herança.
 
 ---
 
+## Exercício 2: Organizando uma hierarquia de animais
 
+Vamos ampliar nosso sistema de animais utilizando herança.
 
-### 📝 Exercício 2: Generalização
+### Parte 1 — Criando as classes
 
-* Crie as classes `Bird`, `Dog` e `Owl`, com as heranças que julgar necessárias.
-* Crie um array que deve aceitar todos os animais (Dog, Owl e Crocodile). Pergunte-se: de que tipo esse array deve ser?
-* Adicione na classe `Animal` o método `eat()`.
-* Adicione dentro dele instâncias de `Dog`, `Owl` e `Crocodile`.
-* Percorra o array e chame o método `eat()` de cada objeto.
-* Observe que **todos têm o mesmo método**, mas pertencem a classes diferentes.
+Crie as seguintes classes:
 
----
+- `Ave`: deve herdar de `Animal`.
+- `Cachorro`: deve herdar de `Mamifero`.
+- `Coruja`: deve herdar de `Ave`.
+
+Cada classe deve possuir seu próprio construtor, recebendo os parâmetros necessários e utilizando `super()` para chamar o construtor da classe pai.
+
+### Parte 2 — Criando um método comum
+
+Adicione o método `comer()` à classe `Animal`.
+
+Esse método deve exibir uma mensagem informando que o animal está comendo.
+
+Como `Cachorro`, `Coruja` e `Crocodilo` herdam, direta ou indiretamente, de `Animal`, todos poderão utilizar esse método sem precisar implementá-lo novamente.
+
+### Parte 3 — Criando um array de animais
+
+No arquivo `index.ts`:
+
+1. Crie um objeto da classe `Cachorro`.
+2. Crie um objeto da classe `Coruja`.
+3. Crie um objeto da classe `Crocodilo`.
+4. Armazene os três objetos em um único array do tipo `Animal[]`.
+5. Utilize um laço de repetição para percorrer o array.
+6. Para cada animal, chame o método `comer()`.
+
+### Parte 4 — Refletindo sobre a herança
+
+Responda:
+
+1. Por que foi possível armazenar objetos de classes diferentes no mesmo array?
+2. Por que todos os objetos conseguem utilizar o método `comer()`?
+3. Qual é a vantagem de implementar esse método apenas uma vez na classe `Animal`?
 
 ## 📚 Resumo
 
