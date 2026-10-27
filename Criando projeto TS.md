@@ -68,7 +68,7 @@ Use a configuração abaixo para manter os arquivos TypeScript em `src/` e gerar
 Crie a pasta `src` e, dentro dela, o arquivo `index.ts`:
 
 ```typescript
-let nome: string = "Daniel";
+let nome: string = "Leo";
 
 console.log("Olá, " + nome);
 ```
@@ -102,5 +102,5 @@ node dist/index.js
 A saída esperada é:
 
 ```text
-Olá, Daniel
+Olá, Leo
 ```
