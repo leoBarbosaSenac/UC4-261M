@@ -291,16 +291,11 @@ diretamente para o restante do código.
 
 ## 6. Comparando os modificadores
 
-  -----------------------------------------------------------------------
-  Modificador       Dentro da própria Fora da classe,   Em subclasses
-                    classe            por um objeto     
-  ----------------- ----------------- ----------------- -----------------
-  `public`          Sim               Sim               Sim
-
-  `private`         Sim               Não               Não
-
-  `protected`       Sim               Não               Sim
-  -----------------------------------------------------------------------
+| Modificador | Dentro da própria classe | Fora da classe, por um objeto | Em subclasses |
+|---|---|---|---|
+| `public` | Sim | Sim | Sim |
+| `private` | Sim | Não | Não |
+| `protected` | Sim | Não | Sim |
 
 **Importante:** esses modificadores controlam o acesso durante a
 verificação de tipos do TypeScript. Os modificadores `private` e
